@@ -2,3 +2,7 @@ osx_image: xcode7.1
 language: objective-c
 before_install: bundle install
 script: fastlane test
+branches:
+	only:
+		- master
+
