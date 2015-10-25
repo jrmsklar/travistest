@@ -15,6 +15,6 @@ class ViewControllerTests: XCTestCase {
     func testMyEnumDescription() {
         XCTAssertEqual(MyEnum.First.description, "This is the first case")
         XCTAssertEqual(MyEnum.Second.description, "This is the second case")
-        XCTAssertEqual(MyEnum.Third.description, "This is NOT the thid case")
+        XCTAssertEqual(MyEnum.Third.description, "This is the third case")
     }
 }
