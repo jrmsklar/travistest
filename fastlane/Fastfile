@@ -38,7 +38,11 @@ platform :ios do
 		workspace: './Travistest.xcworkspace',
 		scheme: 'Travistest',
 		sdk: 'iphonesimulator',
-		destination: "name=iPhone 6"
+		destination: "name=iPhone 6",
+		reports: [{
+			report: 'html',
+			output: './test-report.html'
+		}]
 	)
   end
 
