@@ -12,8 +12,8 @@
 		03A00A9E1BDCA80700240B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A00A9C1BDCA80700240B2A /* Main.storyboard */; };
 		03A00AA01BDCA80700240B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A00A9F1BDCA80700240B2A /* Assets.xcassets */; };
 		03A00AA31BDCA80700240B2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A00AA11BDCA80700240B2A /* LaunchScreen.storyboard */; };
-		03A00AAE1BDCA80700240B2A /* TravistestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A00AAD1BDCA80700240B2A /* TravistestTests.swift */; };
 		03A00AB91BDCA80800240B2A /* TravistestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A00AB81BDCA80800240B2A /* TravistestUITests.swift */; };
+		03A00AC81BDCADB500240B2A /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A00AC71BDCADB500240B2A /* ViewControllerTests.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,12 @@
 		03A00AA21BDCA80700240B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03A00AA41BDCA80700240B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03A00AA91BDCA80700240B2A /* TravistestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravistestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03A00AAD1BDCA80700240B2A /* TravistestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravistestTests.swift; sourceTree = "<group>"; };
 		03A00AAF1BDCA80700240B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03A00AB41BDCA80800240B2A /* TravistestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravistestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A00AB81BDCA80800240B2A /* TravistestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravistestUITests.swift; sourceTree = "<group>"; };
 		03A00ABA1BDCA80800240B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03A00AC61BDCADB500240B2A /* TravistestTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TravistestTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		03A00AC71BDCADB500240B2A /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +111,9 @@
 		03A00AAC1BDCA80700240B2A /* TravistestTests */ = {
 			isa = PBXGroup;
 			children = (
-				03A00AAD1BDCA80700240B2A /* TravistestTests.swift */,
 				03A00AAF1BDCA80700240B2A /* Info.plist */,
+				03A00AC71BDCADB500240B2A /* ViewControllerTests.swift */,
+				03A00AC61BDCADB500240B2A /* TravistestTests-Bridging-Header.h */,
 			);
 			path = TravistestTests;
 			sourceTree = "<group>";
@@ -187,6 +189,7 @@
 		03A00A8D1BDCA80700240B2A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Josh Sklar";
 				TargetAttributes = {
@@ -264,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03A00AAE1BDCA80700240B2A /* TravistestTests.swift in Sources */,
+				03A00AC81BDCADB500240B2A /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,10 +423,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TravistestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SK.TravistestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TravistestTests/TravistestTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travistest.app/Travistest";
 			};
 			name = Debug;
@@ -432,10 +438,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TravistestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SK.TravistestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TravistestTests/TravistestTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travistest.app/Travistest";
 			};
 			name = Release;
