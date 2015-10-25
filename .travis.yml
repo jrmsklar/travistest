@@ -1,2 +1,3 @@
+sudo: required
 language: swift
 script: fastlane test
