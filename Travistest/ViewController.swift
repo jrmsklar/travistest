@@ -15,6 +15,7 @@ class ViewController: UIViewController {
 enum MyEnum {
     case First
     case Second
+    case Third
 }
 
 extension MyEnum : CustomStringConvertible {
@@ -24,6 +25,8 @@ extension MyEnum : CustomStringConvertible {
             return "This is the first case"
         case .Second:
             return "This is the second case"
+        case .Third:
+            return "This is the third case"
         }
     }
 }
