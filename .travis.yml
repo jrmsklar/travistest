@@ -1,3 +1,3 @@
 sudo: required
 language: objective-c
-script: fastlane test
+script: bundle exec fastlane test
