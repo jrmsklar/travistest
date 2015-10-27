@@ -26,7 +26,7 @@ extension MyEnum : CustomStringConvertible {
         case .Second:
             return "This is the second case"
         case .Third:
-            return "This is the third case"
+            return "This is the thirdfds case"
         }
     }
 }
